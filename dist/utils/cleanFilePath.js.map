@@ -1,0 +1,1 @@
+{"version":3,"file":"cleanFilePath.js","sourceRoot":"","sources":["../../src/utils/cleanFilePath.ts"],"names":[],"mappings":"AAAA,MAAM,EAAE,OAAO,EAAE,GAAG,OAAO,CAAC,IAAI,CAAC,CAAC;AAElC;;GAEG;AACH,MAAM,aAAa,GAAG,CAAC,IAAY,EAAE,EAAE;IACrC,OAAO,IAAI,CAAC,OAAO,CAAC,GAAG,EAAE,OAAO,EAAE,CAAC,CAAC;AACtC,CAAC,CAAA;AAED,MAAM,CAAC,OAAO,GAAG,aAAa,CAAC"}
