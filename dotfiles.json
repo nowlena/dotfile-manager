@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "ZSH",
+      "files": ["~/.zshrc"]
+    },
+    {
+      "name": "nvim",
+      "files": [
+        "~/.config/nvim/init.vim",
+        "~/.config/nvim/local_init.vim",
+        "~/.config/nvim/local_bundles.vim",
+        "~/.config/nvim/coc_init.vim",
+        "~/.config/nvim/coc-settings.json"
+      ]
+    }
+  ]
+}
