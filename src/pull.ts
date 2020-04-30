@@ -32,7 +32,7 @@ groups.forEach(({ name, files }: Group) => {
     } catch (err) {
       return console.error(err);
     }
-  });  
+  });
 });
 
 export {}; // allows us to keep same-named vars in other files

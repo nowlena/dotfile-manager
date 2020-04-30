@@ -1,4 +1,4 @@
-const { mkdirSync, copyFileSync } = require('fs');
+const { copyFileSync } = require('fs');
 const { resolve, basename } = require('path');
 const kebabCase = require('lodash.kebabcase');
 const Confirm = require('prompt-confirm');
@@ -32,18 +32,12 @@ const push = () => {
   groups.forEach(({ name, files }: Group) => {
     const dirName = kebabCase(name);
     const dirPath = resolve(__dirname, `../dotfiles/${dirName}`);
-    // make directory
-    try {
-      mkdirSync(dirPath, { recursive: true });
-    } catch (err) {
-      return console.error(err);
-    }
     // copy file from this repo to local
     files.forEach((file, index) => {
       try {
         copyFileSync(resolve(dirPath, `./${basename(file)}`), cleanFilePath(file));
         console.log(` --- [${dirName} - ${index + 1}] pushed file: ${basename(file)}`);
-      }  catch (err) {
+      } catch (err) {
         return console.error(err);
       }
     });
