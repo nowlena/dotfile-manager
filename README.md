@@ -6,7 +6,28 @@ A simple node interface for managing dotfiles
 
 ### Update dotfiles.json
 
-Add your dotfiles to `dotfiles.json` using the format provided
+Add your dotfiles to `dotfiles.json` using the format provided:
+
+```json
+{
+  "groups": [
+    {
+      "name": "ZSH",
+      "files": [
+        "~/.zshrc"
+      ]
+    },
+    {
+      "name": "nvim",
+      "files": [
+        "~/.config/nvim/init.vim",
+        "~/.config/nvim/local_init.vim",
+        "~/.config/nvim/local_bundles.vim",
+      ]
+    }
+  ]
+}
+```
 
 ### Install dependencies
 
@@ -14,18 +35,18 @@ Using LTS Node, run `npm i` in this directory
 
 ## Usage
 
-### Update Repo
+### Pull Files
 
-To update this repo's dotfiles with your local ones, run the following command:
+To pull your local dotfiles into this repo, run the following command:
 
 ```sh
-npm run update-repo
+npm run pull
 ```
 
-### Update Local
+### Push Files
 
-To update your local dotfiles with this repo's ones, run the following command:
+To push this repo's dotfiles to your local machine, run the following command:
 
 ```sh
-npm run update-local
+npm run push
 ```
