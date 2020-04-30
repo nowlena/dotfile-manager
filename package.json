@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A simple node interface for managing dotfiles",
   "scripts": {
-    "update-repo": "node dist/update-repo.js"
+    "update-repo": "node dist/update-repo.js",
+    "backup-local": "node dist/backup.js",
+    "update-local": "node dist/update-local.js"
   },
   "keywords": [
     "dotfiles",
@@ -24,6 +26,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "lodash.kebabcase": "^4.1.1"
+    "lodash.kebabcase": "^4.1.1",
+    "prompt-confirm": "^2.0.4"
   }
 }

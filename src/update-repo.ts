@@ -15,7 +15,8 @@ interface Group {
 /**
  * update repo with local files
  */
-console.log('Updating repo with local versions of dotfiles:');
+console.log('Updating repo with local dotfiles:');
+
 groups.forEach(({ name, files }: Group) => {
   const dirName = kebabCase(name);
   const dirPath = resolve(__dirname, `../dotfiles/${dirName}`);
@@ -24,10 +25,14 @@ groups.forEach(({ name, files }: Group) => {
     if (err) return console.error(err);
     // copy file from local to this repo
     files.forEach(file => {
-      copyFile(cleanFilePath(file), resolve(dirPath, `./${basename(file)}`), (err: Error) => {
-        if (err) return console.error(err);
-        console.log(` --- [${dirName}] updated file: ${basename(file)}`);
-      });
+      copyFile(
+        cleanFilePath(file),
+        resolve(dirPath, `./${basename(file)}`),
+        (err: Error) => {
+          if (err) return console.error(err);
+          console.log(` --- [${dirName}] updated file: ${basename(file)}`);
+        }
+      );
     });
   });
 });

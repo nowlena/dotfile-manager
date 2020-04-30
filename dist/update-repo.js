@@ -10,7 +10,7 @@ const cleanFilePath = require('./utils/cleanFilePath');
 /**
  * update repo with local files
  */
-console.log('Updating repo with local versions of dotfiles:');
+console.log('Updating repo with local dotfiles:');
 groups.forEach(({ name, files }) => {
     const dirName = kebabCase(name);
     const dirPath = resolve(__dirname, `../dotfiles/${dirName}`);

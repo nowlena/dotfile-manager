@@ -8,7 +8,7 @@ A simple node interface for managing dotfiles
 
 Add your dotfiles to `dotfiles.json` using the format provided
 
-### Intall dependencies
+### Install dependencies
 
 Using LTS Node, run `npm i` in this directory
 
@@ -16,16 +16,16 @@ Using LTS Node, run `npm i` in this directory
 
 ### Update Repo
 
-To update this repo with the local versions of your files, run the following command:
+To update this repo's dotfiles with your local ones, run the following command:
 
 ```sh
 npm run update-repo
 ```
 
-### Backup
-
-_todo: instructions and code for backing up local files into this repo_
-
 ### Update Local
 
-_todo: instructions and code pushing files from this repo to your local machine_
+To update your local dotfiles with this repo's ones, run the following command:
+
+```sh
+npm run update-local
+```
