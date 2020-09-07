@@ -2,8 +2,9 @@
 " VISUAL
 " ::::::::::::::::::::::::::::::::::::::::::::::::
 " theme colors
-set background=dark
+set termguicolors
 colorscheme dracula
+set background=dark
 
 " numbers
 set relativenumber
@@ -23,6 +24,13 @@ autocmd VimEnter * EnableWhitespace
 
 " easier cursor view in insert mode
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175
+
+" nerd tree settings
+let NERDTreeShowHidden = 1
+let NERDTreeShowLineNumbers = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeIgnore = ['^node_modules$[[dir]]']
 
 " Include coc config
 if filereadable(expand("~/.config/nvim/coc_init.vim"))

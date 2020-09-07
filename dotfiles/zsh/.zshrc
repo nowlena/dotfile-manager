@@ -71,7 +71,7 @@ DEFAULT_USER="aaron"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -96,6 +96,10 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# deno!
+export DENO_INSTALL="/home/aaron/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -111,11 +115,23 @@ alias cocconfig="nvim ~/.config/nvim/coc_init.vim"
 alias cocsettings="nvim ~/.config/nvim/coc-settings.json"
 alias gi="git init"
 alias gcmsgi="git commit -m 'Initial commit'"
-alias pg-start='sudo service postgresql start'
-alias pg-status='sudo service postgresql status'
-alias pg-run='sudo -u postgres psql'
+alias pg-start="sudo service postgresql start"
+alias pg-stop="sudo service postgresql stop"
+alias pg-restart="sudo service postgresql restart"
+alias pg-status="sudo service postgresql status"
+alias pg-run="sudo -u postgres psql"
 alias bcd-start="sudo service apache2 start && sudo service mysql start"
 alias bcd-stop="sudo service apache2 stop && sudo service mysql stop"
 alias bcd-restart="sudo service apache2 restart && sudo service mysql restart"
 alias bcd-status="sudo service apache2 status && sudo service mysql status"
+alias ipcheck="ip addr show eth0 | grep -oP 'inet \K\S[0-9.]+' && cat /etc/hosts"
+alias nrs="npm run start"
+alias l="exa -lah"
+alias la="exa -lah"
+alias ll="exa -lah"
+alias ls="exa -a"
+alias lsa="exa -lah"
+alias exp="explorer.exe ."
+
+# Sources
 source /home/aaron/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
