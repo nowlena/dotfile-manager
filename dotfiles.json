@@ -15,6 +15,12 @@
         "~/.config/nvim/coc_init.vim",
         "~/.config/nvim/coc-settings.json"
       ]
+    },
+    {
+      "name": "tmux",
+      "files": [
+        "~/.tmux.conf"
+      ]
     }
   ]
 }

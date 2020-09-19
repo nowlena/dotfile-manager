@@ -15,8 +15,13 @@
     "javascriptreact",
     "typescript.tsx"
   ],
+  "eslint.autoFixOnSave": true,
   "snippets.extends": {
-    "javascriptreact": ["javascript"],
-    "typescript": ["javascript"]
+    "javascriptreact": [
+      "javascript"
+    ],
+    "typescript": [
+      "javascript"
+    ]
   }
 }
