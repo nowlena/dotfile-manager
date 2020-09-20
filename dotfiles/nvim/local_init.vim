@@ -2,8 +2,9 @@
 " VISUAL
 " ::::::::::::::::::::::::::::::::::::::::::::::::
 " theme colors
-set termguicolors
-colorscheme dracula
+if (has("termguicolors"))
+  set termguicolors
+endif
 set background=dark
 
 " numbers
@@ -24,6 +25,15 @@ autocmd VimEnter * EnableWhitespace
 
 " easier cursor view in insert mode
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175
+
+" easy comment line with ctrl + /
+if has('win32')
+  nmap <C-/> <Plug>CommentaryLine
+  vmap <C-/> <Plug>Commentary
+else
+  nmap <C-_> <Plug>CommentaryLine
+  vmap <C-_> <Plug>Commentary
+endif
 
 " nerd tree settings
 let NERDTreeShowHidden = 1
