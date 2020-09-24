@@ -36,11 +36,17 @@ else
 endif
 
 " nerd tree settings
-let NERDTreeShowHidden = 1
-let NERDTreeShowLineNumbers = 1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeIgnore = ['^node_modules$[[dir]]']
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeShowLineNumbers = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeIgnore = ['^node_modules$[[dir]]']
+let g:NERDTreeWinSize=35
+" nerd tree git
+let g:NERDTreeGitStatusUseNerdFonts = 1
+" nerd tree devicons
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
+let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 
 " Include coc config
 if filereadable(expand("~/.config/nvim/coc_init.vim"))

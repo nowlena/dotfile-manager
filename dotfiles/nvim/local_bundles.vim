@@ -1,6 +1,3 @@
-" ::::::::::::::::::::::::::::::::::::::::::::::::
-" VISUAL
-" ::::::::::::::::::::::::::::::::::::::::::::::::
 " colors
 Plug 'dracula/vim', { 'as': 'dracula' }
 
@@ -22,6 +19,11 @@ Plug 'luochen1990/rainbow'
 
 " make matching tags more apparent
 Plug 'valloric/matchtagalways'
+
+" NERDTREE - git support
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" NERDTREE - syntax highlight
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " add icons (install notes say to keep this as last plugin loaded)
 Plug 'ryanoasis/vim-devicons'
