@@ -7,6 +7,11 @@ if (has("termguicolors"))
 endif
 set background=dark
 
+" dracula pro
+packadd! dracula_pro
+let g:dracula_colorterm = 0
+colorscheme dracula_pro
+
 " numbers
 set relativenumber
 

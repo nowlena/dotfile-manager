@@ -81,6 +81,10 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+# CUSTOM - load ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - --no-rehash)"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -124,8 +128,20 @@ alias lsa="exa -lah"
 alias gi="git init"
 alias gcmsgi="git commit -m 'Initial commit'"
 # dev
-alias bcd-start="sudo service apache2 start && sudo service mysql start"
-alias bcd-stop="sudo service apache2 stop && sudo service mysql stop"
-alias bcd-restart="sudo service apache2 restart && sudo service mysql restart"
-alias bcd-status="sudo service apache2 status && sudo service mysql status"
+alias bcd-start="sudo service apache2 start && sudo service mysql start && sudo service cron start"
+alias bcd-stop="sudo service apache2 stop && sudo service mysql stop && sudo service cron stop"
+alias bcd-restart="sudo service apache2 restart && sudo service mysql restart && sudo service cron restart"
+alias bcd-status="sudo service apache2 status && sudo service mysql status && sudo service cron status"
 alias nrs="npm run start"
+alias pg-shell="sudo -u postgres psql"
+alias pg-start="sudo service postgresql start"
+alias pg-stop="sudo service postgresql stop"
+alias pg-restart="sudo service postgresql restart"
+alias pg-status="sudo service postgresql status"
+alias redis-start="sudo /etc/init.d/redis-server start"
+alias redis-stop="sudo /etc/init.d/redis-server stop"
+alias redis-restart="sudo /etc/init.d/redis-server restart"
+alias redis-status="sudo /etc/init.d/redis-server status"
+# docker & kubernetes
+alias dps="docker ps"
+alias k="kubectl"
